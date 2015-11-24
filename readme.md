@@ -62,6 +62,24 @@ $ github-upstreamer --help
     $ github-upstreamer --name upstream2 --dir /path/to/repo
 ```
 
+## Usecase:
+
+Say a github user `monkey` forked `yeoman/generator-node`:
+
+```sh
+$ git remote -v
+origin	https://github.com/monkey/generator-node.git (fetch)
+origin	https://github.com/monkey/generator-node.git (push)
+
+$ github-upstreamer # magic happens
+
+$ git remote -v
+
+origin	https://github.com/monkey/generator-node.git (fetch)
+origin	https://github.com/monkey/generator-node.git (push)
+upstream	https://github.com/yeoman/generator-node.git (fetch)
+upstream	https://github.com/yeoman/generator-node.git (push)
+```
 
 ## License
 
