@@ -1,0 +1,46 @@
+{
+  "name": "github-upstreamer",
+  "version": "0.0.0",
+  "description": "Auto configure a remote for a fork!",
+  "license": "MIT",
+  "repository": "hemanth/github-upstreamer",
+  "author": {
+    "name": "Hemanth.HM",
+    "email": "hemanth.hm@gmail.com",
+    "url": "h3manth.com"
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "github",
+    "git",
+    "upstream",
+    "fork",
+    "github"
+  ],
+  "dependencies": {
+    "git-remote-origin-url": "^1.1.2",
+    "isomorphic-fetch": "^2.2.0",
+    "meow": "^3.4.2"
+  },
+  "devDependencies": {
+    "ava": "^0.3.0",
+    "xo": "^0.10.0"
+  },
+  "xo": {
+    "ignores": [
+      "test.js"
+    ]
+  }
+}
