@@ -15,8 +15,13 @@ $ npm install --save github-upstreamer
 ```js
 const githubUpstreamer = require('github-upstreamer');
 
-githubUpstreamer('unicorns');
-//=> 'unicorns & rainbows'
+githubUpstreamer(dir, name, function(err, res){
+	if(err) {
+		console.error(err);
+	} else {
+		console.log('Upstream is set!');
+	}
+});
 ```
 
 
