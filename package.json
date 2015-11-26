@@ -14,7 +14,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "xo && ava"
+    "test": "mocha"
   },
   "files": [
     "index.js",
@@ -31,16 +31,10 @@
   ],
   "dependencies": {
     "git-remote-origin-url": "^1.1.2",
-    "isomorphic-fetch": "^2.2.0",
+    "github-upstream-url": "^1.0.0",
     "meow": "^3.4.2"
   },
   "devDependencies": {
-    "ava": "^0.3.0",
-    "xo": "^0.10.0"
-  },
-  "xo": {
-    "ignores": [
-      "test.js"
-    ]
+    "mocha": "^2.3.4"
   }
 }
