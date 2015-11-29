@@ -5,6 +5,7 @@ var exec = require('child_process').exec;
 var fetch = require("isomorphic-fetch");
 var originUrl = require('git-remote-origin-url');
 var githubUpstreamUrl = require('github-upstream-url');
+var gitURL = require('github-url-from-git');
 var gitCmd = 'git remote add ';
 
 module.exports = function (dir, originName, cb) {
@@ -18,7 +19,7 @@ module.exports = function (dir, originName, cb) {
 		if (err) {
 			return cb(err,null);
 		}
-	    var remotePath = parse(remote).path.replace(/\.[^/.]+$/, "").replace(/\//,'');
+	    var remotePath = parse(gitURL(remote)).path.replace(/\.[^/.]+$/, "").replace(/\//,'');
 	    githubUpstreamUrl(remotePath)
 	    	.then((url) => {
 	    		if(url) {

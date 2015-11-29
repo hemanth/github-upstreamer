@@ -4,9 +4,15 @@ var execSync = require('child_process').execSync;
 var chdir = require('process').chdir;
 var join = require('path').join;
 
-execSync('git clone https://github.com/hemanth/maybe-hugs.git fixture');
-
 describe("Test github-upstreamer", function(done) {
+	beforeEach(function(done) {
+		execSync('git clone https://github.com/hemanth/maybe-hugs.git fixture');
+		done();
+	});
+
+	afterEach(function(done) {
+		execSync('rm -rf fixture');
+	});
 
 	it('should work on a non-fork repo', function (done) {
 		var cwd = process.cwd();
