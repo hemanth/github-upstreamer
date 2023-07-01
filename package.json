@@ -33,7 +33,7 @@
     "git-remote-origin-url": "^1.1.2",
     "github-upstream-url": "^1.0.0",
     "github-url-from-git": "^1.4.0",
-    "meow": "^3.4.2"
+    "meow": "^10.0.0"
   },
   "devDependencies": {
     "mocha": "^2.3.4"
