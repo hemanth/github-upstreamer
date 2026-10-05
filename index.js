@@ -3,7 +3,7 @@ var parse = require('url').parse;
 var chdir = require('process').chdir;
 var exec = require('child_process').exec;
 var fetch = require("isomorphic-fetch");
-var originUrl = require('git-remote-origin-url');
+var originUrl = ((m) => (m && m.default) ? m.default : m)(require('git-remote-origin-url'));
 var githubUpstreamUrl = require('github-upstream-url');
 var gitURL = require('github-url-from-git');
 var gitCmd = 'git remote add ';

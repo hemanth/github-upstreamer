@@ -7,7 +7,7 @@ var join = require('path').join;
 describe("Test github-upstreamer", function(done) {
 	beforeEach(function(done) {
 		this.timeout(3500);
-		execSync('git clone https://github.com/hemanth/maybe-hugs.git fixture');
+		execSync('rm -rf fixture && mkdir fixture && git -C fixture init && git -C fixture remote add origin https://github.com/hemanth/node.git');
 		done();
 	});
 
